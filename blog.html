@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — FrisGemaakt Rotterdam</title>
+  <meta name="description" content="Schoonmaaktips, duurzaam poetsen en hygiëne-advies van FrisGemaakt Rotterdam.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Fris<span>Gemaakt</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">Over Ons</a></li>
+        <li><a href="index.html#services">Diensten</a></li>
+        <li><a href="index.html#ba">Voor & Na</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="blog.html" style="color:var(--heading)">Blog</a></li>
+        <li><a href="index.html#contact" class="btn btn-primary">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="badge">Blog</span>
+      <h1>Schoonmaak & Hygiëne</h1>
+      <p>Tips over ecologisch schoonmaken, vloeronderhoud en meer.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="blog-grid">
+        <article class="blog-card"><img src="images/hero.jpg" alt="Groen schoonmaken"><div class="blog-card-body"><span class="tag">Duurzaam</span><h3><a href="#">Groen schoonmaken: zo maakt u het verschil</a></h3><p>Ecologische producten zijn effectief, betaalbaar en beter voor uw gezondheid. Zo stapt u over.</p><span class="meta">12 april 2026</span></div></article>
+        <article class="blog-card"><img src="images/about.jpg" alt="Kantoor hygiëne"><div class="blog-card-body"><span class="tag">Kantoor</span><h3><a href="#">De 5 vuilste plekken op kantoor (en hoe u ze schoonhoudt)</a></h3><p>Toetsenborden, deurklinken en koffiezetapparaten: deze plekken worden vaak vergeten.</p><span class="meta">8 april 2026</span></div></article>
+        <article class="blog-card"><img src="images/craft.jpg" alt="PVC vloer"><div class="blog-card-body"><span class="tag">Vloeren</span><h3><a href="#">PVC vloer onderhouden: de complete gids</a></h3><p>Met de juiste techniek gaat uw PVC vloer jaren langer mee. Wij delen onze professionele tips.</p><span class="meta">3 april 2026</span></div></article>
+        <article class="blog-card"><img src="images/detail.jpg" alt="Allergie"><div class="blog-card-body"><span class="tag">Gezondheid</span><h3><a href="#">Schoonmaken met allergie: tips voor een gezond huis</a></h3><p>Huisstofmijt, schimmel en pollen: zo houdt u uw woning allergeenvrij zonder chemicaliën.</p><span class="meta">28 maart 2026</span></div></article>
+        <article class="blog-card"><img src="images/project1.jpg" alt="Glazenwassen"><div class="blog-card-body"><span class="tag">Glas</span><h3><a href="#">Osmose-water glazenwassen: hoe werkt dat?</a></h3><p>Puur water zonder mineralen laat geen strepen achter. Zo werkt de techniek achter streepvrij glas.</p><span class="meta">22 maart 2026</span></div></article>
+        <article class="blog-card"><img src="images/project2.jpg" alt="Voorjaarsschoonmaak"><div class="blog-card-body"><span class="tag">Seizoen</span><h3><a href="#">Voorjaarsschoonmaak voor bedrijven: een plan van aanpak</a></h3><p>De lente is het perfecte moment voor een grondige beurt. Zo plant u het efficiënt.</p><span class="meta">15 maart 2026</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo">Fris<span>Gemaakt</span></a><p>Groen schoonmaakbedrijf in Rotterdam.</p></div>
+        <div><h4>Diensten</h4><ul><li><a href="index.html#services">Kantoor</a></li><li><a href="index.html#services">Particulier</a></li><li><a href="index.html#services">Glazenwassen</a></li></ul></div>
+        <div><h4>Navigatie</h4><ul><li><a href="index.html#about">Over Ons</a></li><li><a href="index.html#reviews">Reviews</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><a href="tel:+31100000000">010-0000000</a></li><li><a href="mailto:info@frisgemaakt.nl">info@frisgemaakt.nl</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 FrisGemaakt Rotterdam. Alle rechten voorbehouden.</p><div class="footer-social"><a href="#"><i class="lucide-facebook"></i></a><a href="#"><i class="lucide-instagram"></i></a><a href="#"><i class="lucide-linkedin"></i></a></div></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('nav-links').classList.toggle('active'); });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.blog-card').forEach((el, i) => { gsap.from(el, { scrollTrigger: { trigger: el, start: 'top 85%' }, y: 50, opacity: 0, duration: .7, delay: i%3*.12, ease: 'power3.out' }); });
+  </script>
+</body>
+</html>
